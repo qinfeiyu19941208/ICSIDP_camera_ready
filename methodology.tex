@@ -71,7 +71,7 @@ In this work, we use RDFNet\cite{Park2017}, which is a high-precision network fo
 	%	\vspace*{-0.35cm} 
 	
 \end{figure}
-Second, the predicted semantic score map $S_{t-1}$ for frame $F_{t-1}$ is warped to $\hat{S}_{t}$ according to the optical flow $O_{t-1,t}$ between $F_t$ and $F_{t-1}$, which is estimated using an efficient and accurate model PWC-Net~\cite{Sun2018} from two frames. 
+Second, the predicted semantic score map $S_{t-1}$ for frame $F_{t-1}$ is warped to $\hat{S}_{t}$ according to the optical flow $O_{t-1,t}$ between $F_t$ and $F_{t-1}$, which is estimated using an efficient and accurate model PWC-Net~\cite{Sun2018}. 
 We implement a bilinear interpolation for $40$ dimensional score vector of each pixel in $S_{t-1}$, where 40 is the total number of object classes in the dataset. 
 \begin{equation}
 \centering
@@ -116,7 +116,7 @@ where ${x_i}$ and ${\mathbf{y}_i}$ are a pixel of an input frame and the corresp
 $\mathbf{y}_i$ is a $c$ dimensional probability vector for each pixel.
 ${c}=40$ is number of categories.
 %
-${\mathbf{p}_i}$ and ${\mathbf{w}_i}$ are one-hot vectors for each pixel of the pseudo ground truth or ground truth label, and warped prediction $W_{t}$ from previous frame, respectively. 
+${\mathbf{p}_i}$ and ${\mathbf{w}_i}$ is a one-hot vector for each pixel of the pseudo ground truth or ground truth label, and warped prediction $W_{t}$ from previous frame, respectively. 
 %
 ${l(\cdot)}$ is the softmax loss of one pixel, and ${f(\cdot)}$ is our basic segmentation network. 
 %

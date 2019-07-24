@@ -101,13 +101,13 @@ Compared to common data augmentation operations, it significantly increases the 
 %
 There are two main image alignment methods to build correspondence of two images for label propagation: optical flow estimation and parametric model.
 %
-However, due to optical flow estimation heavily depends on the low-level features of the image to find dense correspondence, it is often inaccurate and computationally expensive.
+However, due to optical flow estimation heavily depends on the low-level features of the image, it is often inaccurate and computationally expensive.
 %
 Hence, in our work, the method of parametric model is selected for label propagation.
 %
 The commonly used parametric model methods are rigid body transformation and homography transformation.
 %
-Owing to obvious holes in the depth data collected by Kinect, and the corresponding camera external parameters are not provided,
+Owing to serious lack of the depth data collected by Kinect, and the corresponding camera external parameters are not provided by NYU-Depth V2 dataset,
 %
 we refer to homography transformation for label propagation.
 %
